@@ -1,0 +1,3 @@
+index=ssh_logs "Accepted password"
+| stats count as successful_logins by user
+| sort -successful_logins

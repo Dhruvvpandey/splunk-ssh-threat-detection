@@ -1,0 +1,4 @@
+index=ssh_logs "Failed password"
+| stats count as failed_attempts by src_ip
+| where failed_attempts > 10
+| sort -failed_attempts
